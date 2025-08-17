@@ -3,6 +3,7 @@
 #include <fstream>              // File input/output
 #include <string>
 #include <sstream>              // std::stringstream for parsing hex numbers
+#include <iostream>
 
 // Converts a string containing a hex number (like "0x20") into an unsigned int
 static UINT hexToUInt(const std::string& s) {
@@ -13,7 +14,33 @@ static UINT hexToUInt(const std::string& s) {
         return static_cast<UINT>(x);    // Return as UINT
 }
 
+void welcomeMessage() {
+
+        std::string configFile = "config.ini";
+        std::string repositoryLink = "https://github.com/michal-flaska/autoclicker/blob/main/README.md";
+
+        /* Doesnt look as good as expected in the console, so im leaving it commented ;-;
+
+        std::cout << "    _         _             _ _      _             " << '\n';
+        std::cout << "   / \  _   _| |_ ___   ___| (_) ___| | _____ _ __ " << '\n';
+        std::cout << "  / _ \| | | | __/ _ \ / __| | |/ __| |/ / _ \ '__|" << '\n';
+        std::cout << " / ___ \ |_| | || (_) | (__| | | (__|   <  __/ |   " << '\n';
+        std::cout << "/_/   \_\__,_|\__\___/ \___|_|_|\___|_|\_\___|_|   " << '\n';
+
+        */
+
+        std::cout << "Hello there," << '\n';
+        std::cout << "Make sure you edited settings in the 'config.ini' file!" << '\n';
+        std::cout << "If you need help, make sure to check out the README first:" << '\n';
+        std::cout << repositoryLink << '\n';
+        std::cout << "Have fun!" << '\n';
+
+}
+
 int main() {
+
+        welcomeMessage();
+
         // Variables to store configuration values
         UINT trigger = 0;               // Virtual-key code for the key to hold
         UINT action = 0;                // Virtual-key code for the key to simulate
