@@ -17,7 +17,8 @@ static UINT hexToUInt(const std::string& s) {
 void welcomeMessage() {
 
         std::string configFile = "config.ini";
-        std::string repositoryLink = "https://github.com/michal-flaska/autoclicker/blob/main/README.md";
+        std::string readmeLink = "https://github.com/michal-flaska/autoclicker/blob/main/README.md";
+        std::string authorName = "Mike";
 
         /* Doesnt look as good as expected in the console, so im leaving it commented ;-;
 
@@ -31,9 +32,12 @@ void welcomeMessage() {
 
         std::cout << "Hello there," << '\n';
         std::cout << "Make sure you edited settings in the 'config.ini' file!" << '\n';
-        std::cout << "If you need help, make sure to check out the README first:" << '\n';
-        std::cout << repositoryLink << '\n';
+        std::cout << '\n';
+        std::cout << "If you need help, make sure to check out the README at:" << '\n';
+        std::cout << readmeLink << '\n';
+        std::cout << '\n';
         std::cout << "Have fun!" << '\n';
+        std::cout << "--" << authorName << '\n';
 
 }
 
